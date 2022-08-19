@@ -6,9 +6,9 @@ void GetFirTree(int count)
 
     for(int i = 0; i <= count-1; i++)
     {
-        for (int j = 1; j <= count+(count-1); j++)
+        for (int j = 1; j <= index+i*2; j++)
         {
-            Console.Write((j >= index && j <= index+i*2) ? "*" : " ");
+            Console.Write((j >= index) ? "*" : " ");
         }
 
         index = index - 1;
