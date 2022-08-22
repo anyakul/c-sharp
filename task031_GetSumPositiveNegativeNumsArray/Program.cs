@@ -13,9 +13,12 @@ int[] GetArray(int count, int min, int max)
     return arr;
 }
 
-int count = 12;
-int min = -8;
-int max = 9;
+Console.Write("Напишите число элементов в массиве: ");
+int count = int.Parse(Console.ReadLine());
+Console.Write("Напишите минимальное число: ");
+int min = int.Parse(Console.ReadLine());
+Console.Write("Напишите максимальное число: ");
+int max = int.Parse(Console.ReadLine());
 
 int[] arr = GetArray(count, min, max);
 Console.WriteLine($"[{String.Join(",", arr)}]");

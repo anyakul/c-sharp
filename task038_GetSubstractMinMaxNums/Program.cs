@@ -19,7 +19,7 @@ double GetSubstructMinMaxNums(double[] mas)
     double max = mas[0];
     double res = 0;
 
-    for (int i = 0; i < mas.Length; i++)
+    for (int i = 1; i < mas.Length; i++)
     {
         if (mas[i] > max) {
             max = mas[i];
