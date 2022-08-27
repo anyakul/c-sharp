@@ -13,7 +13,7 @@ int[,] SumIndexMatrix(int m, int n)
     {
         for (int j = 0; j < n; j++)
         {
-            matr[i,j] = i + j;
+            matr[i, j] = i + j;
         }
     }
 

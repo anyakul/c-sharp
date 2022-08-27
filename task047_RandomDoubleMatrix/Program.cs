@@ -13,8 +13,8 @@ double[,] GetRandomDoubleMatrix(int min, int max, int m, int n)
     {
         for (int j = 0; j < n; j++)
         {
-            matr[i,j] = new Random().NextDouble() * (min - max) + max;
-            matr[i, j] = Math.Round(matr[i,j], 2);
+            matr[i, j] = new Random().NextDouble() * (min - max) + max;
+            matr[i, j] = Math.Round(matr[i, j], 2);
         }
     }
 

@@ -12,7 +12,7 @@ int[,] GetRandomIntMatrix(int min, int max, int m, int n)
     {
         for (int j = 0; j < n; j++)
         {
-            matr[i,j] = new Random().Next(min, max);
+            matr[i, j] = new Random().Next(min, max);
         }
     }
 
@@ -66,10 +66,12 @@ Console.WriteLine();
 
 bool result = FindNumber(matrix, number);
 
-if (result == true) {
+if (result == true)
+{
     Console.WriteLine($"Число {number} есть в массиве");
 }
 
-if (!result) {
+if (!result)
+{
     Console.WriteLine($"Числа {number} нет в массиве");
 }

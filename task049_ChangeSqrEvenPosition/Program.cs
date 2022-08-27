@@ -13,7 +13,7 @@ int[,] GetRandomIntMatrix(int min, int max, int m, int n)
     {
         for (int j = 0; j < n; j++)
         {
-            matr[i,j] = new Random().Next(min, max);
+            matr[i, j] = new Random().Next(min, max);
         }
     }
 
