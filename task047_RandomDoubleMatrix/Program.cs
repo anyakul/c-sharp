@@ -29,6 +29,7 @@ void PrintArray(double[,] matr)
         {
             Console.Write($"{matr[i, j]} ");
         }
+
         Console.WriteLine();
     }
 }

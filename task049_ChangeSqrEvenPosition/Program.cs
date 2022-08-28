@@ -28,6 +28,7 @@ void PrintArray(int[,] matr)
         {
             Console.Write($"{matr[i, j]} ");
         }
+
         Console.WriteLine();
     }
 }
@@ -42,10 +43,8 @@ int[,] ChangeSqrEvenPosition(int[,] matr)
             {
                 matr[i, j] = matr[i, j] * matr[i, j];
             }
-            else
-            {
-                matr[i, j] = matr[i, j];
-            }
+
+            matr[i, j] = matr[i, j];
         }
     }
 

@@ -31,7 +31,7 @@ int ConvertRomanToArabic(string romanNumber)
             i += 2;
         }
 
-        else if (num[i] >= num[j])
+        else
         {
             result += num[i];
             i++;

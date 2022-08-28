@@ -1,7 +1,10 @@
-﻿/* 50) Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет
+﻿/* Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+
 1 4 7 2
-5 9 2 3 -> 17 -> такого числа в массиве нет
+5 9 2 3
 8 4 2 4
+
+m = 1, n =7 -> такого числа в массиве не
 */
 
 int[,] GetRandomIntMatrix(int min, int max, int m, int n)
@@ -27,26 +30,14 @@ void PrintArray(int[,] matr)
         {
             Console.Write($"{matr[i, j]} ");
         }
+
         Console.WriteLine();
     }
 }
 
-bool FindNumber(int[,] matr, int number)
+int FindNumber(int[,] matr, int m, int n)
 {
-    bool result = false;
-
-    for (int i = 0; i < matr.GetLength(0); i++)
-    {
-        for (int j = 0; j < matr.GetLength(1); j++)
-        {
-            if (matr[i, j] == number)
-            {
-                return true;
-            }
-        }
-    }
-
-    return result;
+    return matr[m, n];
 }
 
 Console.WriteLine("Введите минимальное число: ");
@@ -54,24 +45,22 @@ int min = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите максимальное число: ");
 int max = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите число элементов в столбце: ");
-int m = int.Parse(Console.ReadLine());
+int cols = int.Parse(Console.ReadLine());
 Console.WriteLine("Введите число элементов в строке: ");
+int rows = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите номер столбца: ");
+int m = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите номер строки: ");
 int n = int.Parse(Console.ReadLine());
-Console.WriteLine("Введите число для поиска: ");
-int number = int.Parse(Console.ReadLine());
 
-int[,] matrix = GetRandomIntMatrix(min, max, m, n);
+int[,] matrix = GetRandomIntMatrix(min, max, cols, rows);
 PrintArray(matrix);
 Console.WriteLine();
 
-bool result = FindNumber(matrix, number);
-
-if (result == true)
+if (m < matrix.GetLength(0) && n < matrix.GetLength(1))
 {
-    Console.WriteLine($"Число {number} есть в массиве");
+    int result = FindNumber(matrix, m, n);
+    Console.WriteLine($"C координатами ({m} {n}) находится число {result})");
 }
 
-if (!result)
-{
-    Console.WriteLine($"Числа {number} нет в массиве");
-}
+Console.WriteLine($"Такого числа в массиве нет");
